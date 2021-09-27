@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    path('getimages/', views.getimages, name='getimages'),
+    path('postimages/', views.postimages, name='postimages'),
     path('postchatt/', views.postchatt, name='postchatt'),
     path('getchatts/', views.getchatts, name='getchatts'),
     path('admin/', admin.site.urls)
