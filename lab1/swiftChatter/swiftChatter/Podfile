@@ -1,0 +1,8 @@
+platform :ios, '14.1'
+
+target 'swiftChatter' do
+  use_frameworks!
+  pod 'SDWebImage'
+  pod 'Alamofire'
+
+end
