@@ -22,21 +22,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Sample Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KrZ-QM-4u6">
-                                <rect key="frame" x="16" y="117" width="353" height="85"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sample Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KrZ-QM-4u6">
+                                <rect key="frame" x="16" y="117" width="382" height="85"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="382" id="6gd-Kr-YpN"/>
+                                    <constraint firstAttribute="height" constant="85" id="yhT-JW-ik9"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-ZJ-yFo" userLabel="Album Button">
-                                <rect key="frame" x="320" y="209" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-ZJ-yFo" userLabel="Album Button">
+                                <rect key="frame" x="362" y="218" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="BxA-s8-q84"/>
-                                    <constraint firstAttribute="height" constant="40" id="QMF-Ld-Pzi"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Wkh-Bj-fbG"/>
-                                    <constraint firstAttribute="width" constant="40" id="csf-Ul-VKr"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="vGm-C5-pPa"/>
+                                    <constraint firstAttribute="width" constant="40" id="CV9-1L-bcI"/>
+                                    <constraint firstAttribute="height" constant="40" id="F1g-8q-tFO"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="photo" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
@@ -45,13 +46,11 @@
                                     <action selector="pickMedia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLW-T3-o3G"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft6-Dc-EAF" userLabel="Camera Button">
-                                <rect key="frame" x="272" y="209" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft6-Dc-EAF" userLabel="Camera Button">
+                                <rect key="frame" x="310" y="218" width="40" height="40"/>
                                 <accessibility key="accessibilityConfiguration" label="Camera Button"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="1xw-t2-gSo"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Cp1-kv-ssc"/>
-                                    <constraint firstAttribute="height" constant="40" id="WwE-rh-3vQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="QaS-iY-qo5"/>
                                     <constraint firstAttribute="width" constant="40" id="cau-wp-Dtp"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="camera" catalog="system">
@@ -61,33 +60,28 @@
                                     <action selector="accessCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LdX-Zq-6ZD"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAI-10-Wbf">
-                                <rect key="frame" x="16" y="209" width="128" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SAI-10-Wbf">
+                                <rect key="frame" x="16" y="214" width="128" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="G8K-N9-sTl"/>
-                                    <constraint firstAttribute="width" constant="128" id="hLF-xI-r6g"/>
+                                    <constraint firstAttribute="width" constant="128" id="679-zU-ywo"/>
+                                    <constraint firstAttribute="height" constant="128" id="fbI-Bh-4rm"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NGI-ZJ-yFo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="333" id="7n8-yn-Vlk"/>
+                            <constraint firstItem="NGI-ZJ-yFo" firstAttribute="leading" secondItem="Ft6-Dc-EAF" secondAttribute="trailing" constant="12" id="8Jg-sg-RJf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KrZ-QM-4u6" secondAttribute="trailing" priority="250" constant="16" id="8Os-jK-wSm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ft6-Dc-EAF" secondAttribute="trailing" constant="12" id="QaD-1a-2e1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NGI-ZJ-yFo" secondAttribute="bottom" constant="444.5" id="RHE-sN-c6w"/>
+                            <constraint firstItem="SAI-10-Wbf" firstAttribute="top" secondItem="KrZ-QM-4u6" secondAttribute="bottom" constant="12" id="BT7-1a-LOv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NGI-ZJ-yFo" secondAttribute="trailing" constant="12" id="G88-pJ-rvM"/>
+                            <constraint firstItem="Ft6-Dc-EAF" firstAttribute="top" secondItem="KrZ-QM-4u6" secondAttribute="bottom" constant="16" id="LUq-cB-vjE"/>
                             <constraint firstItem="lGQ-hs-p8z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Rpw-ZJ-JkB"/>
                             <constraint firstItem="lGQ-hs-p8z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TyC-i0-b6l"/>
                             <constraint firstItem="KrZ-QM-4u6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VIQ-Wk-dYv"/>
-                            <constraint firstItem="SAI-10-Wbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fXL-bC-Wra"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NGI-ZJ-yFo" secondAttribute="trailing" constant="16" id="lEc-Ps-lgh"/>
-                            <constraint firstItem="SAI-10-Wbf" firstAttribute="top" secondItem="KrZ-QM-4u6" secondAttribute="bottom" constant="12" id="nrc-ag-op5"/>
-                            <constraint firstItem="NGI-ZJ-yFo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="pp8-M2-UwN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NGI-ZJ-yFo" secondAttribute="trailing" constant="12" id="qdl-eL-sKe"/>
-                            <constraint firstItem="Ft6-Dc-EAF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="rW5-dt-ug0"/>
+                            <constraint firstItem="NGI-ZJ-yFo" firstAttribute="top" secondItem="KrZ-QM-4u6" secondAttribute="bottom" constant="16" id="k3r-HA-zBB"/>
                             <constraint firstItem="KrZ-QM-4u6" firstAttribute="top" secondItem="lGQ-hs-p8z" secondAttribute="bottom" constant="20" id="tw1-ey-VFj"/>
-                            <constraint firstItem="Ft6-Dc-EAF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="vnb-pF-fx3"/>
-                            <constraint firstItem="NGI-ZJ-yFo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="yc4-dt-C6f"/>
+                            <constraint firstItem="SAI-10-Wbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="u0g-aE-5jw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Post" id="v3C-YO-HMt">
@@ -186,7 +180,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="chatImageView" destination="dwk-By-zyU" id="Ien-xC-smU"/>
+                                    <outlet property="chattImageView" destination="dwk-By-zyU" id="QWL-WF-gkm"/>
                                     <outlet property="messageLabel" destination="4rn-fJ-A0J" id="uPG-ww-zdZ"/>
                                     <outlet property="timestampLabel" destination="PW4-B2-Cap" id="KSp-uW-Xqz"/>
                                     <outlet property="usernameLabel" destination="0Fe-M6-6qJ" id="xcz-OQ-Ygt"/>

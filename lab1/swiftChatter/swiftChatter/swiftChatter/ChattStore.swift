@@ -15,7 +15,7 @@ final class ChattStore {
     private init() {}
     var chatts = [Chatt]()
     private let nFields = Mirror(reflecting: Chatt()).children.count
-    private let serverUrl = "https://mobapp.eecs.umich.edu/"
+    private let serverUrl = "https://18.224.108.161/"
     
     func postChatt(_ chatt: Chatt, image: UIImage?) {
         guard let apiUrl = URL(string: serverUrl+"postimages/") else {

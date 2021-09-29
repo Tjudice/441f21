@@ -17,6 +17,8 @@ final class MainVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows per section
+        print(ChattStore.shared.chatts.count)
+
         return ChattStore.shared.chatts.count
     }
     
@@ -33,6 +35,7 @@ final class MainVC: UITableViewController {
         
         let chatt = ChattStore.shared.chatts[indexPath.row]
         cell.backgroundColor = (indexPath.row % 2 == 0) ? .systemGray5 : .systemGray6
+        print("TESTING")
         cell.usernameLabel.text = chatt.username
         cell.messageLabel.text = chatt.message
         cell.timestampLabel.text = chatt.timestamp
