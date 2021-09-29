@@ -148,7 +148,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="videoButton:" destination="b55-Ik-Hu9" eventType="touchUpInside" id="q2S-6u-wWg"/>
-                                                <action selector="videoTapped:" destination="b55-Ik-Hu9" eventType="touchUpInside" id="WeA-CC-IDD"/>
+                                                <action selector="videoTapped:" destination="b55-Ik-Hu9" eventType="touchUpInside" id="Qp5-Q7-xWB"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rn-fJ-A0J">
@@ -184,7 +184,7 @@
                                     <outlet property="messageLabel" destination="4rn-fJ-A0J" id="uPG-ww-zdZ"/>
                                     <outlet property="timestampLabel" destination="PW4-B2-Cap" id="KSp-uW-Xqz"/>
                                     <outlet property="usernameLabel" destination="0Fe-M6-6qJ" id="xcz-OQ-Ygt"/>
-                                    <outlet property="videoButton" destination="iBS-wT-4WV" id="Tt1-LA-aS5"/>
+                                    <outlet property="videoButton" destination="iBS-wT-4WV" id="Pcq-CP-ZQY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -8,12 +8,13 @@ final class ChattTableCell: UITableViewCell {
             
     @IBOutlet weak var chattImageView: UIImageView!
     
+    
     @IBOutlet weak var videoButton: UIButton!
     
     var playVideo: (() -> Void)?  // a closure
     
-    @IBAction func videoTapped(_ sender: Any) {
+    @IBAction func videoTapped(_ sender: UIButton) {
         self.playVideo?()
     }
-
+    
 }
