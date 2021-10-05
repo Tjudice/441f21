@@ -46,6 +46,9 @@ final class MainVC: UITableViewController {
             cell.chattImageView.isHidden = true
         }
         if let urlString = chatt.videoUrl, let videoUrl = URL(string: urlString) {
+            
+//            print(type(of: videoUrl))
+
             cell.videoButton.isHidden = false // remember: cells are recycled and reused
             cell.playVideo = {
                 let avPlayerVC = AVPlayerViewController()
