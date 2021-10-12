@@ -1,6 +1,4 @@
 import UIKit
-import AVKit
-import SDWebImage
 
 final class MainVC: UITableViewController {
 
@@ -17,8 +15,6 @@ final class MainVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows per section
-        print(ChattStore.shared.chatts.count)
-
         return ChattStore.shared.chatts.count
     }
     
@@ -38,31 +34,6 @@ final class MainVC: UITableViewController {
         cell.usernameLabel.text = chatt.username
         cell.messageLabel.text = chatt.message
         cell.timestampLabel.text = chatt.timestamp
-        if let urlString = chatt.imageUrl, let imageUrl = URL(string: urlString) {
-            cell.chattImageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "photo"), options: [.progressiveLoad])
-            cell.chattImageView.isHidden = false
-        } else {
-            cell.chattImageView.image = nil
-            cell.chattImageView.isHidden = true
-        }
-        if let urlString = chatt.videoUrl, let videoUrl = URL(string: urlString) {
-            
-//            print(type(of: videoUrl))
-
-            cell.videoButton.isHidden = false // remember: cells are recycled and reused
-            cell.playVideo = {
-                let avPlayerVC = AVPlayerViewController()
-                avPlayerVC.player = AVPlayer(url: videoUrl)
-                if let player = avPlayerVC.player {
-                    self.present(avPlayerVC, animated: true) {
-                        player.play()
-                    }
-                }
-            }
-        } else {
-            cell.videoButton.isHidden = true
-            cell.playVideo = nil
-        }
         return cell
     }
     

@@ -62,7 +62,6 @@ final class PostVC: UIViewController,                   UIImagePickerControllerD
                     .resizeImage(targetSize: CGSize(width: 150, height: 181))
             } else if mediaType == "public.movie" {
                 videoUrl = info[UIImagePickerController.InfoKey.mediaURL] as? URL
-                // can convert to absoluteString ONLY after picker.dismiss
             }
         }
         picker.dismiss(animated: true, completion: nil)

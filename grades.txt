@@ -1,4 +1,5 @@
 Your team grade for lab0 is
 tjudice: 100
+lab1: 93.75/100
 
 DM @staff on Slack if you want to see the class grade distribution.
