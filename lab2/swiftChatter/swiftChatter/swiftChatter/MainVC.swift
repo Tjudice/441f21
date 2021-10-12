@@ -1,11 +1,34 @@
 import UIKit
+import GoogleMaps
 
 final class MainVC: UITableViewController {
+    
+    private let locmanager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        locmanager.desiredAccuracy = kCLLocationAccuracyBest
+        locmanager.requestWhenInUseAuthorization()
         refreshControl?.addAction(UIAction(handler: refreshTimeline), for: UIControl.Event.valueChanged)
         refreshTimeline(nil)
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(startMap(_:)))
+        swipeRecognizer.direction = .left
+        self.view.addGestureRecognizer(swipeRecognizer)
+        let composeButton = UIBarButtonItem(
+                systemItem: .compose,
+                primaryAction:UIAction(handler: { _ in
+                                        let postVC = PostVC()
+                                        postVC.locmanager = self.locmanager
+                                        self.navigationController?.present(
+                                            UINavigationController(rootViewController: postVC), animated: true
+                ) }))
+        self.navigationItem.rightBarButtonItem = composeButton
+        self.navigationItem.title = "Chatter"
+    }
+    @objc func startMap(_ sender: UISwipeGestureRecognizer) {
+        let mapsVC = MapsVC()
+        mapsVC.locmanager = self.locmanager
+        self.navigationController?.pushViewController(mapsVC, animated: true)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,6 +57,21 @@ final class MainVC: UITableViewController {
         cell.usernameLabel.text = chatt.username
         cell.messageLabel.text = chatt.message
         cell.timestampLabel.text = chatt.timestamp
+        if let geodata = chatt.geodata {
+                    cell.geodataLabel.text = "Posted from " + geodata.loc
+                        + ", while facing " + geodata.facing + " moving at " + geodata.speed + " speed."
+                    cell.geodataLabel.highlight(searchedText: geodata.loc, geodata.facing, geodata.speed)
+                cell.mapButton.isHidden = false
+                cell.renderChatt = {
+                    let mapsVC = MapsVC()
+                    mapsVC.chatt = chatt
+                    self.navigationController?.pushViewController(mapsVC, animated: true)
+                }
+                } else {
+                    cell.geodataLabel.text = nil
+                    cell.mapButton.isHidden = true
+                                cell.renderChatt = nil
+                }
         return cell
     }
     
@@ -48,6 +86,12 @@ final class MainVC: UITableViewController {
             }
         }
     }
-    
+    override func loadView() {
+        super.loadView()
+
+        tableView.register(ChattTableCell.self, forCellReuseIdentifier: "ChattTableCell")
+
+        refreshControl = UIRefreshControl()
+    }
     
 }

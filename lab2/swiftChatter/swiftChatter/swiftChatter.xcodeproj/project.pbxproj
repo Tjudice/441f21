@@ -3,35 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8340FB2226F11D8200BF9BCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8340FB2126F11D8200BF9BCB /* AppDelegate.swift */; };
-		8340FB2426F11D8200BF9BCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8340FB2326F11D8200BF9BCB /* SceneDelegate.swift */; };
 		8340FB2626F11D8200BF9BCB /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8340FB2526F11D8200BF9BCB /* PostVC.swift */; };
-		8340FB2926F11D8200BF9BCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8340FB2726F11D8200BF9BCB /* Main.storyboard */; };
 		8340FB2B26F11D8200BF9BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8340FB2A26F11D8200BF9BCB /* Assets.xcassets */; };
 		8340FB2E26F11D8200BF9BCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8340FB2C26F11D8200BF9BCB /* LaunchScreen.storyboard */; };
+		836426292714FB3A00125DBA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836426282714FB3A00125DBA /* Extensions.swift */; };
+		8364262B2714FE9200125DBA /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364262A2714FE9200125DBA /* PostView.swift */; };
+		8364262D2716278400125DBA /* GeoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364262C2716278400125DBA /* GeoData.swift */; };
 		836D365526F17B7300FE52DC /* Chatt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D365426F17B7300FE52DC /* Chatt.swift */; };
 		836D365726F17BCE00FE52DC /* ChattStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D365626F17BCE00FE52DC /* ChattStore.swift */; };
 		836D365926F1809700FE52DC /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D365826F1809700FE52DC /* ChatTableCell.swift */; };
 		836D365B26F1827200FE52DC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D365A26F1827200FE52DC /* MainVC.swift */; };
+		83FE4AAB27162F2D00F7385E /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FE4AAA27162F2D00F7385E /* MapsVC.swift */; };
+		C927468100767865836819AE /* Pods_swiftChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E946B7F33A4AC10663BD7653 /* Pods_swiftChatter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8340FB1E26F11D8200BF9BCB /* swiftChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8340FB2126F11D8200BF9BCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8340FB2326F11D8200BF9BCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8340FB2526F11D8200BF9BCB /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
-		8340FB2826F11D8200BF9BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8340FB2A26F11D8200BF9BCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8340FB2D26F11D8200BF9BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8340FB2F26F11D8200BF9BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836426282714FB3A00125DBA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8364262A2714FE9200125DBA /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		8364262C2716278400125DBA /* GeoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoData.swift; sourceTree = "<group>"; };
 		836D365426F17B7300FE52DC /* Chatt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatt.swift; sourceTree = "<group>"; };
 		836D365626F17BCE00FE52DC /* ChattStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattStore.swift; sourceTree = "<group>"; };
 		836D365826F1809700FE52DC /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
 		836D365A26F1827200FE52DC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		83FE4AAA27162F2D00F7385E /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
+		A2E4C4FB79BFCC63220D28C1 /* Pods-swiftChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.release.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.release.xcconfig"; sourceTree = "<group>"; };
+		D9A9F29691019C649223CF28 /* Pods-swiftChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChatter.debug.xcconfig"; path = "Target Support Files/Pods-swiftChatter/Pods-swiftChatter.debug.xcconfig"; sourceTree = "<group>"; };
+		E946B7F33A4AC10663BD7653 /* Pods_swiftChatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C927468100767865836819AE /* Pods_swiftChatter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B684651B14057F9F16C0CAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9A9F29691019C649223CF28 /* Pods-swiftChatter.debug.xcconfig */,
+				A2E4C4FB79BFCC63220D28C1 /* Pods-swiftChatter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8340FB1526F11D8200BF9BCB = {
 			isa = PBXGroup;
 			children = (
 				8340FB2026F11D8200BF9BCB /* swiftChatter */,
 				8340FB1F26F11D8200BF9BCB /* Products */,
+				2B684651B14057F9F16C0CAF /* Pods */,
+				DC4BCAC8D9A72FB093F15DF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,18 +85,28 @@
 			isa = PBXGroup;
 			children = (
 				8340FB2126F11D8200BF9BCB /* AppDelegate.swift */,
-				8340FB2326F11D8200BF9BCB /* SceneDelegate.swift */,
+				836426282714FB3A00125DBA /* Extensions.swift */,
+				83FE4AAA27162F2D00F7385E /* MapsVC.swift */,
 				8340FB2526F11D8200BF9BCB /* PostVC.swift */,
-				8340FB2726F11D8200BF9BCB /* Main.storyboard */,
 				8340FB2A26F11D8200BF9BCB /* Assets.xcassets */,
 				8340FB2C26F11D8200BF9BCB /* LaunchScreen.storyboard */,
 				8340FB2F26F11D8200BF9BCB /* Info.plist */,
 				836D365426F17B7300FE52DC /* Chatt.swift */,
+				8364262C2716278400125DBA /* GeoData.swift */,
 				836D365626F17BCE00FE52DC /* ChattStore.swift */,
 				836D365826F1809700FE52DC /* ChatTableCell.swift */,
 				836D365A26F1827200FE52DC /* MainVC.swift */,
+				8364262A2714FE9200125DBA /* PostView.swift */,
 			);
 			path = swiftChatter;
+			sourceTree = "<group>";
+		};
+		DC4BCAC8D9A72FB093F15DF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E946B7F33A4AC10663BD7653 /* Pods_swiftChatter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8340FB3226F11D8200BF9BCB /* Build configuration list for PBXNativeTarget "swiftChatter" */;
 			buildPhases = (
+				2CBDECBA29300B31FE546113 /* [CP] Check Pods Manifest.lock */,
 				8340FB1A26F11D8200BF9BCB /* Sources */,
 				8340FB1B26F11D8200BF9BCB /* Frameworks */,
 				8340FB1C26F11D8200BF9BCB /* Resources */,
+				CCA2667B5FFC5ACC8DEBFD68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,11 +170,52 @@
 			files = (
 				8340FB2E26F11D8200BF9BCB /* LaunchScreen.storyboard in Resources */,
 				8340FB2B26F11D8200BF9BCB /* Assets.xcassets in Resources */,
-				8340FB2926F11D8200BF9BCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CBDECBA29300B31FE546113 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swiftChatter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCA2667B5FFC5ACC8DEBFD68 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swiftChatter/Pods-swiftChatter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8340FB1A26F11D8200BF9BCB /* Sources */ = {
@@ -151,25 +224,20 @@
 			files = (
 				836D365926F1809700FE52DC /* ChatTableCell.swift in Sources */,
 				8340FB2626F11D8200BF9BCB /* PostVC.swift in Sources */,
+				8364262B2714FE9200125DBA /* PostView.swift in Sources */,
 				8340FB2226F11D8200BF9BCB /* AppDelegate.swift in Sources */,
 				836D365526F17B7300FE52DC /* Chatt.swift in Sources */,
-				8340FB2426F11D8200BF9BCB /* SceneDelegate.swift in Sources */,
+				83FE4AAB27162F2D00F7385E /* MapsVC.swift in Sources */,
 				836D365726F17BCE00FE52DC /* ChattStore.swift in Sources */,
 				836D365B26F1827200FE52DC /* MainVC.swift in Sources */,
+				8364262D2716278400125DBA /* GeoData.swift in Sources */,
+				836426292714FB3A00125DBA /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8340FB2726F11D8200BF9BCB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8340FB2826F11D8200BF9BCB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8340FB2C26F11D8200BF9BCB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -299,6 +367,7 @@
 		};
 		8340FB3326F11D8200BF9BCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A9F29691019C649223CF28 /* Pods-swiftChatter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +387,7 @@
 		};
 		8340FB3426F11D8200BF9BCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2E4C4FB79BFCC63220D28C1 /* Pods-swiftChatter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
