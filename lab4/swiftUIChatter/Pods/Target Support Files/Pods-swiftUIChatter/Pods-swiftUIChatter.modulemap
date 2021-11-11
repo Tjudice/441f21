@@ -1,0 +1,6 @@
+framework module Pods_swiftUIChatter {
+  umbrella header "Pods-swiftUIChatter-umbrella.h"
+
+  export *
+  module * { export * }
+}

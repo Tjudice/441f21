@@ -12,39 +12,44 @@ final class ChattStore {
     private init() {}
     var chatts = [Chatt]()
     private let nFields = Mirror(reflecting: Chatt()).children.count
-    private let serverUrl = "https://mobapp.eecs.umich.edu/"
+    private let serverUrl = "https://18.224.108.161/"
     
     func postChatt(_ chatt: Chatt) {
-            let jsonObj = ["username": chatt.username,
-                           "message": chatt.message]
-            guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
-                print("postChatt: jsonData serialization error")
-                return
-            }
-                    
-            guard let apiUrl = URL(string: serverUrl+"postchatt/") else {
-                print("postChatt: Bad URL")
-                return
-            }
-            
-            var request = URLRequest(url: apiUrl)
-            request.httpMethod = "POST"
-            request.httpBody = jsonData
+        var geoObj: Data?
+        if let geodata = chatt.geodata {
+            geoObj = try? JSONSerialization.data(withJSONObject: [geodata.lat, geodata.lon, geodata.loc, geodata.facing, geodata.speed])
+        }
+        let jsonObj = ["username": chatt.username,
+                               "message": chatt.message,
+                               "geodata": (geoObj == nil) ? nil : String(data: geoObj!, encoding: .utf8)]
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj) else {
+            print("postChatt: jsonData serialization error")
+            return
+        }
+                
+        guard let apiUrl = URL(string: serverUrl+"postmaps/") else {
+            print("postChatt: Bad URL")
+            return
+        }
+        
+        var request = URLRequest(url: apiUrl)
+        request.httpMethod = "POST"
+        request.httpBody = jsonData
 
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let _ = data, error == nil else {
-                    print("postChatt: NETWORKING ERROR")
-                    return
-                }
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                    print("postChatt: HTTP STATUS: \(httpStatus.statusCode)")
-                    return
-                }
-            }.resume()
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let _ = data, error == nil else {
+                print("postChatt: NETWORKING ERROR")
+                return
+            }
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                print("postChatt: HTTP STATUS: \(httpStatus.statusCode)")
+                return
+            }
+        }.resume()
     }
     
     func getChatts(_ completion: ((Bool) -> ())?) {
-        guard let apiUrl = URL(string: serverUrl+"getchatts/") else {
+        guard let apiUrl = URL(string: serverUrl+"getmaps/") else {
             print("getChatts: Bad URL")
             return
         }
@@ -73,9 +78,20 @@ final class ChattStore {
             self.chatts = [Chatt]()
             for chattEntry in chattsReceived {
                 if chattEntry.count == self.nFields {
-                    self.chatts.append(Chatt(username: chattEntry[0],
-                                        message: chattEntry[1],
-                                        timestamp: chattEntry[2]))
+                    let geoArr = chattEntry[3]?.data(using: .utf8).flatMap {
+                                            try? JSONSerialization.jsonObject(with: $0) as? [Any]
+                                        }
+                                        self.chatts.append(Chatt(username: chattEntry[0],
+                                                                 message: chattEntry[1],
+                                                                 timestamp: chattEntry[2],
+                                                                 geodata: geoArr.map {
+                                                                    GeoData(lat: $0[0] as! Double,
+                                                                            lon: $0[1] as! Double,
+                                                                            loc: $0[2] as! String,
+                                                                            facing: $0[3] as! String,
+                                                                            speed: $0[4] as! String)
+                                                                 }
+                                        ))
                 } else {
                     print("getChatts: Received unexpected number of fields: \(chattEntry.count) instead of \(self.nFields).")
                 }
