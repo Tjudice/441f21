@@ -35,6 +35,7 @@ struct MainView: View {
                                             if ChatterID.shared.expiration == Date(timeIntervalSince1970: 0.0) { // upon first launch
                                                         ChatterID.shared.open()
                                                     }
+
                                                                 if let _ = ChatterID.shared.id {
                                                                     isSignedin.toggle()
                                                                 } else {

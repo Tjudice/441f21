@@ -18,7 +18,6 @@ final class ChatterID {
             kSecReturnData: true,
             kSecReturnAttributes: true,
         ] as CFDictionary
-        
         var itemRef: AnyObject?
         let searchStatus = SecItemCopyMatching(searchFor, &itemRef)
         let df = DateFormatter()

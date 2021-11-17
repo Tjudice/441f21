@@ -29,7 +29,7 @@ struct PostView: View {
                                                     } else {
                                                         print("Error signing in. Please try again.")
                                                     }
-
+                            
                             isPresented.toggle()
                         }) {
                             Image(systemName: "paperplane")
